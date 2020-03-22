@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="StyleSheet" href="../css/jpetstore.css" type="text/css" media="screen"/>
+
+</head>
+<body>
+<header th:fragment="header">
+    <div id="Header">
+        <div id="Logo">
+            <div id="LogoContent">
+                <a href="main"><img src="../images/logo-topbar.gif"/></a>
+<!--                下面这个为什么不行？-->
+<!--                <a href="main"><img src="../static/images/logo-topbar.gif"/></a>-->
+            </div>
+        </div>
+
+        <div id="Menu">
+            <div id="MenuContent">
+                <a href="viewCart"><img align="middle" name="img_cart"
+                                        src="../images/cart.gif"/></a> <img align="middle"
+                                                                            src="../images/separator.gif"/> <a
+                    href="../account/SignonForm.html">Sign In</a> <a href="#">Sign
+                Out</a> <img align="middle" src="../images/separator.gif"/> <a
+                    href="../account/EditAccountForm.html">My Account</a> <img align="middle"
+                                                                               src="../images/separator.gif"/> <a
+                    href="../help.html">?</a>
+            </div>
+        </div>
+
+        <div id="Search">
+            <div id="SearchContent">
+                <form action="../catalog/SearchProducts.html" method="post">
+                    <input type="text" name="keyword" size="14"/> <input type="submit"
+                                                                         name="searchProducts" value="Search"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+</body>
+</html>
